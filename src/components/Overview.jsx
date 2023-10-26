@@ -16,7 +16,7 @@ const Overview = () => {
                 </div>
                 <div className="img1-container">
                     
-                    <img src='../public/R.jpg'
+                    <img src='../public/r.jpg'
                         className='overview-image1'/>
                     <div className="background-div-1" />
                     
