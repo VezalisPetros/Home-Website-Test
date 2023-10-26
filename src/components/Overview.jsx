@@ -28,7 +28,7 @@ const Overview = () => {
 
       <div className="right-grid">
         
-        <img src='/dist/neat-organised-workspace-with-guitar.jpg'
+        <img src='/dist/assets/neat-organised-workspace-with-guitar-605d75a0.jpg'
         className='overview-image2'/>
         <div className="background-div-2" />
 
