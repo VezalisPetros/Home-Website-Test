@@ -16,7 +16,7 @@ const Overview = () => {
                 </div>
                 <div className="img1-container">
                     
-                    <img src='/public/wp2449378.webp'
+                    <img src='/public/R.jpg'
                         className='overview-image1'/>
                     <div className="background-div-1" />
                     
