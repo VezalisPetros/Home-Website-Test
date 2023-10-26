@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body {
+  margin: 0; /* Add this line to remove the margin */
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/****MAIN PAGE****/
+
+
+.mainPageContainer{
+  background-image: url('../public/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
+  height: 100vh;
+  background-size: cover;
+  animation: slideshow 25s linear infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.place-scrollDownBtn{
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 10%;
+  padding: 30px;
+}
+
+.place-scrollDownBtn h1{
+  color: white;
+}
+
+.scrollDownBtn {
+  border: 2px solid lightgray;
+  border-radius: 50%;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  animation: bounce 1.5s infinite; /* Adjust animation duration as needed */
+}
+
+.scrollDownBtn:hover{
+  background-color: rgba(255, 255, 255, 0.5);;
+}
+
+.material-symbols-outlined {
+  /* Add your styles for the down arrow icon here */
+
+  color: white; /* Example: set the color to blue */
+  font-size: 36px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px); /* Adjust the distance the arrow moves */
+  }
+}
+
+
+@keyframes slideshow {
+  0% {
+    background-image: url('../public/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
+    background-size: 105% 105%; /* Slightly larger than 100% (initial zoom in) */
+  }
+  25% {
+    background-image: url('../public/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
+    background-size: 100% 100%; /* Back to 100% (no zoom) */
+  }
+  50% {
+    background-image: url('../public/neat-organised-workspace-with-guitar.jpg');
+    background-size: 105% 105%; /* Slightly larger than 100% (initial zoom in) */
+  }
+  75% {
+    background-image: url('../public/neat-organised-workspace-with-guitar.jpg');
+    background-size: 100% 100%; /* Back to 100% (no zoom) */
+  }
+  100% {
+    background-image: url('../public/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
+    background-size: 105% 105%; /* Slightly larger than 100% (initial zoom in) */
+  }
+}
+
+
+
+/*Header*/
+
+.nav-links{
+  margin: 2% 10%;
+  padding: 30px;
+}
+
+.nav-links a{
+  color: white;
+  font-size: 1.9rem;
+  text-decoration: none;
+  padding: 30px;
+  position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px; /* Adjust the underline height as needed */
+  background-color: white; /* Color of the underline */
+  transition: width 0.3s; /* Transition for the underline animation */
+}
+
+.nav-links a:hover::before {
+  width: 100%; /* Full width to create the underline on hover */
+}
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  
+  
+}
+
+.logo{
+  color: white;
+  font-weight: bold;
+  font-size: 4rem;
+  margin: 2% 10%;
+  padding: 30px;
+}
+
+.hamburger{
+  position: relative;
+  display: block;
+  width: 60px;
+  cursor: pointer;
+  
+  margin: 10px;
+  
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border:none;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  width: 35%;
+  justify-content:flex-start;
+  
+}
+
+.menu label{
+  color: white;
+  font-size: 15px;
+  padding: 0;
+  
+}
+.hamburger .bar ,.hamburger:after ,.hamburger:before{
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: white;
+  margin: 6px 0px 6px auto;
+  transition: 0.4s;
+}
+
+.hamburger .bar{
+  width: 50%;
+}
+.hamburger:after{
+  width: 30%;
+}
+
+
+.mobile-nav-links {
+  position: fixed;
+  top: 0;
+  right: 0; /* Start with the navigation fully visible */
+  width: 0; /* Set initial width to 0 */
+  min-height: 100vh;
+  display: block;
+  padding-top: 120px;
+  background: #fff; /* Adjust as needed */
+  overflow: hidden; /* Hide the overflow */
+  border: 2px solid black;
+}
+  
+.mobile-nav-links *{
+  /* Hide all elements inside .mobile-nav-links */
+  visibility: hidden;
+  /* Alternatively, you can set opacity to 0 or display to none */
+}
+
+
+
+
+
+
+.mobile-nav-links.open {
+  
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+
+}
+.mobile-nav-links.open a{
+  visibility: visible;
+  color: black;
+  text-decoration: none;
+  padding: 18px;
+  
+  font-family: 'Neucha', cursive;
+}
+
+.mobile-nav-links.open .material-symbols-outlined.close-btn {
+  visibility: visible;
+  font-size: 50px;
+  position:absolute;
+  top:10px;
+  left:20px;
+ 
+}
+
+
+
+
+
+
+/*Stats PAGE */
+
+.stats-page{
+  display: flex;
+  background-color: rgb(234, 233, 233);
+  height: 20vh;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  font-size: 45px;
+  font-weight: 200;
+}
+
+.rooms{
+  display: flex;
+  padding: 20px;
+}
+
+.bed ,.bath ,.squares{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  font-family: 'Neucha', cursive;
+}
+
+.bed span ,.bath span ,.squares span{
+  margin: 5px;
+  
+}
+.material-symbols-outlined {
+  color: black;
+  font-size: 70px; /* Adjust the font-size to make the icons larger */
+}
+
+.price div{
+  font-size: 25px;
+  color: rgb(136, 136, 136);
+  margin-bottom: 20px;
+  font-weight: 100px;
+}
+
+.price span{
+  font-family: 'Neucha', cursive;
+}
+
+.location{
+  display: none;
+}
+
+
+/*Overview PAGE */
+
+.overview-page{
+  display: flex;
+  height: 100vh;
+}
+
+.left-grid{
+  
+  height: 100vh;
+  width: 50%;
+  font-size: 23px;
+  display: flex;
+  flex-direction: column;
+  
+  
+  
+}
+.left-grid h2{
+  padding-left: 20%;
+  margin-top:20%;
+  font-family: 'Neucha', cursive;
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.text-property{
+  padding-left: 20%;
+  padding-top: 5%;
+  color: rgb(136, 136, 136);
+}
+
+.overview-image1 {
+  width: 70%;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 20%;
+  background-size: contain;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  
+}
+.img1-container{
+  position: relative;
+}
+.background-div-1 {
+  background-color: rgb(49, 48, 48);
+  width: 70%;
+  height: 80%;
+  position: absolute;
+  bottom:-7%;
+  right:5% ;
+  z-index: -1;
+  
+}
+
+.right-grid{
+  
+  height: 100vh;
+  width:60%;
+  position: relative;
+}
+
+.overview-image2 {
+  width: 70%;
+  height: 60%;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+  background-size: contain;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+ 
+}
+
+.background-div-2 {
+  background-color: rgb(49, 48, 48);
+  width: 70%;
+  height: 60%;
+  position: absolute;
+  top:13%;
+  left:15% ;
+  z-index: -1;
+  
+}
+
+
+
+
+@media (max-width: 800px) {
+  .nav-links{
+    display: none;
+  }
+
+  .logo{
+    font-size: 30px;
+    padding: 0;
+    margin: 15px;
+    font-weight: 100;
+  }
+  .mainPageContainer {
+    background-size: contain;
+    height: 30vh;
+  }
+
+  .place-scrollDownBtn{
+    display: none;
+  }
+  .stats-page{
+    flex-wrap: wrap;
+    height: auto;
+    font-size: 30px;
+    padding: 30px;
+    font-weight: 200;
+  }
+
+  .price span{
+    font-size: 35px;
+   
+  }
+  .price div{
+    font-size: 18px;
+    text-align: center;
+    
+  }
+  .location{
+    display: block;
+    background-color: black;
+    color: white;
+    height: 10vh;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    font-family: 'Neucha', cursive;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bed span ,.bath span ,.squares span{
+  margin: 0;
+  text-align: center;
+  
+}
+
+/*OVERVIEW PAGE */
+
+.overview-page{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.left-grid{
+  width: 100%;
+  font-size: 18px;
+  padding-left: 30px;
+}
+
+.left-grid h2{
+  text-align: left;
+  font-size: 40px;
+  padding: 0;
+}
+
+
+.text-property{
+  padding-top: 20px;
+  padding-left: 0;
+  padding-right: 40px;
+  
+}
+
+.background-div-1,.background-div-2{
+  display: none;
+}
+.overview-image1{
+  
+  /* padding: 0;
+  margin: 0;
+  box-shadow: none;
+  width: 90%;
+  height: auto; */
+  display: none;
+
+  
+}
+
+.right-grid{
+  width: 100%;
+  
+  padding: 30px;
+}
+.overview-image2{
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+  box-shadow: none;
+  width: 100%; 
+  height:auto;
+}
+  
+}
