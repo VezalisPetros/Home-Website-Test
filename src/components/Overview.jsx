@@ -16,7 +16,7 @@ const Overview = () => {
                 </div>
                 <div className="img1-container">
                     
-                    <img src='../public/r.jpg'
+                    <img src='/dist/r.jpg'
                         className='overview-image1'/>
                     <div className="background-div-1" />
                     
@@ -28,7 +28,7 @@ const Overview = () => {
 
       <div className="right-grid">
         
-        <img src='../public/neat-organised-workspace-with-guitar.jpg'
+        <img src='/dist/neat-organised-workspace-with-guitar.jpg'
         className='overview-image2'/>
         <div className="background-div-2" />
 
