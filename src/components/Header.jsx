@@ -13,11 +13,21 @@ const Header = () => {
     };
 
     const handleScroll = () => {
+    if(windowWidth>950){
+      if (window.scrollY > window.innerHeight) { // Check if scrollY is greater than 100vh
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+    else{
       if (window.scrollY > window.innerHeight/3.5) { // Check if scrollY is greater than 100vh
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
+    }
+      
     };
 
     // Add event listeners
@@ -65,7 +75,7 @@ const Header = () => {
   return (
     <div className='header'>
       <div className='logo'>REALCO</div>
-      {windowWidth <= 800 ? (
+      {windowWidth <= 800 || isScrolled ? (
         <>
           <div className={`menu ${isScrolled ? 'white' : ''}`}>
             <label htmlFor="menu-btn">MENU</label>
@@ -88,7 +98,7 @@ const Header = () => {
           </nav>
         </>
       ) : (
-        <nav className='nav-links'>
+        <nav className={`nav-links  `}>
           <a href='#overview'>Overview</a>
           <a href='#features'>Features</a>
           <a href='#photos'>Photos</a>

@@ -174,12 +174,13 @@ body {
   box-shadow: 0 2px 4px rgba(0.6, 0.6, 0.6, 0.6);;
   color: black;
   position:fixed;
-  top:20px;
-  right: 25px;
-  width: 110px;
+  top:40px;
+  right: 10px;
+  width: 120px;
   display: flex;
-  align-items: center;
+  justify-content: center;
   z-index: 9;
+  border-radius: 3px;
   /* Add any other styles you want to apply when the class is present */
 }
 .menu label{
