@@ -94,6 +94,7 @@ const Header = () => {
             <a href='#overview' onClick={toggleHamburger}>Overview</a>
             <a href='#features' onClick={toggleHamburger}>Features</a>
             <a href='#photos' onClick={toggleHamburger}>Photos</a>
+            <a href='#map' onClick={toggleHamburger}>Map</a>
             <a href='#contact' onClick={toggleHamburger}>Contact</a>
           </nav>
         </>
@@ -102,6 +103,7 @@ const Header = () => {
           <a href='#overview'>Overview</a>
           <a href='#features'>Features</a>
           <a href='#photos'>Photos</a>
+          <a href='#map'>Map</a>
           <a href='#contact'>Contact</a>
         </nav>
       )}

@@ -7,6 +7,7 @@ import Overview from './components/Overview'
 import Features from './components/Features'
 import Photos from './components/Photos'
 import Map from './components/Map'
+import Contact from './components/Contact'
 const App = () => {
   return (
     <div >
@@ -16,6 +17,7 @@ const App = () => {
       <Features/>
       <Photos/>
       <Map/>
+      <Contact/>
       
     </div>
   )
