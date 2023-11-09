@@ -405,7 +405,7 @@ body {
 /*features-amenities */
 .features-amenities{
  text-align: center;
- position: absolute;
+ 
  top: -12%;
  font-family: 'Neucha', cursive;
  font-size: 50px;
@@ -483,7 +483,7 @@ body {
   color: white;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.2 rem;
+  
   position: absolute;
   
   transform: translateY(-50%);
