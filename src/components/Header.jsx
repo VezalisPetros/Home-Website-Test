@@ -75,7 +75,7 @@ const Header = () => {
   return (
     <div className='header'>
       <div className='logo'>REALCO</div>
-      {windowWidth <= 800 || isScrolled ? (
+      {windowWidth <= 1300 || isScrolled ? (
         <>
           <div className={`menu ${isScrolled ? 'white' : ''}`}>
             <label htmlFor="menu-btn">MENU</label>
