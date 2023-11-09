@@ -212,6 +212,8 @@ body {
 }
 
 
+
+
 .mobile-nav-links {
   position: fixed;
   top: 0;
@@ -256,6 +258,7 @@ body {
   position:absolute;
   top:10px;
   left:20px;
+  cursor: pointer;
  
 }
 
@@ -411,7 +414,7 @@ body {
 
 .features-amenities-container{
   background-color: rgb(234, 233, 233);
-  position:absolute;
+  position:relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -442,6 +445,74 @@ body {
   display: flex;
   justify-content: center;
   margin: 50px;
+}
+/* Photos section */
+
+.photos-section{
+ 
+  position: relative;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 0 35px;
+ 
+  
+}
+
+.photos-title{
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  font-size: 50px; 
+  padding: 30px;
+}
+.wrapper{
+  max-width: 1200px;
+  position: relative;
+}
+.wrapper span{
+  top:50%;
+  height: 46px;
+  width: 46px;
+  background-color: #303030;
+  text-align: center;
+  
+  line-height: 46px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2 rem;
+  position: absolute;
+  
+  transform: translateY(-50%);
+}
+.wrapper .carousel{
+  font-size: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+.carousel img{
+  height: 350px;
+  width: calc(100%3);
+  object-fit: cover;
+  margin-left: 15px;
+
+}
+.carousel img:first-child{
+  margin-left: 0px;
+}
+
+
+
+.wrapper span:first-child{
+  left: -23px;
+}
+.wrapper span:last-child{
+  right: -23px;
 }
 
 @media (max-width: 800px) {
@@ -574,4 +645,15 @@ body {
  .features-canvas{
    width: 100%;
  }
+
+ /*photos */
+ .carousel img{
+  width: calc(100%/2);
+ }
+}
+
+@media (max-width: 500px) {
+  .carousel img{
+    width: calc(100%);
+   }
 }
