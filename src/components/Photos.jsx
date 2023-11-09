@@ -1,8 +1,28 @@
 import React, { useState, useEffect } from 'react';
 
 const Photos = () => {
-  const [showLeftIcon, setShowLeftIcon] = useState(true);
+  const [showLeftIcon, setShowLeftIcon] = useState(false);
   const [showRightIcon, setShowRightIcon] = useState(true);
+
+  useEffect(() => {
+    const carouselElement = document.querySelector('.carousel');
+
+    const handleScroll = () => {
+      // Check if the component has already been mounted before updating the state
+      if (carouselElement && carouselElement.scrollWidth > carouselElement.clientWidth) {
+        setShowLeftIcon(carouselElement.scrollLeft > 0);
+        setShowRightIcon(carouselElement.scrollLeft < carouselElement.scrollWidth - carouselElement.clientWidth);
+      }
+    };
+
+    // Set up event listener
+    carouselElement.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on unmount
+    return () => {
+      carouselElement.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const scrollPhotos = (direction) => {
     const carouselElement = document.querySelector('.carousel');
@@ -14,31 +34,11 @@ const Photos = () => {
     }
   };
 
-  useEffect(() => {
-    const carouselElement = document.querySelector('.carousel');
-    if (carouselElement) {
-      setShowLeftIcon(carouselElement.scrollLeft > 0);
-      setShowRightIcon(carouselElement.scrollLeft < carouselElement.scrollWidth - carouselElement.clientWidth);
-    }
-
-    const handleScroll = () => {
-      setShowLeftIcon(carouselElement.scrollLeft > 0);
-      setShowRightIcon(carouselElement.scrollLeft < carouselElement.scrollWidth - carouselElement.clientWidth);
-    };
-
-    carouselElement.addEventListener('scroll', handleScroll);
-
-    return () => {
-      carouselElement.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <div className='photos-section' id='photos'>
-        
       <div className="wrapper">
         {showLeftIcon && (
-          <span class="material-symbols-outlined" id='left' onClick={() => scrollPhotos('left')}>
+          <span className="material-symbols-outlined" id='left' onClick={() => scrollPhotos('left')}>
             arrow_back_ios
           </span>
         )}
@@ -49,7 +49,7 @@ const Photos = () => {
           <img src="/wp2449378.webp" alt="img" />
         </div>
         {showRightIcon && (
-          <span class="material-symbols-outlined" id='right' onClick={() => scrollPhotos('right')}>
+          <span className="material-symbols-outlined" id='right' onClick={() => scrollPhotos('right')}>
             arrow_forward_ios
           </span>
         )}
