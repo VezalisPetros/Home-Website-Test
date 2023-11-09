@@ -489,7 +489,7 @@ body {
   transform: translateY(-50%);
 }
 .wrapper .carousel{
-  font-size: 0px;
+  
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
@@ -513,6 +513,10 @@ body {
 }
 .wrapper span:last-child{
   right: -23px;
+}
+
+#left,#right{
+  font-size: 20px;
 }
 
 @media (max-width: 800px) {
