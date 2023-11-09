@@ -38,7 +38,7 @@ const Photos = () => {
         
       <div className="wrapper">
         {showLeftIcon && (
-          <span className="material-symbols-outlined" id='left' onClick={() => scrollPhotos('left')}>
+          <span class="material-symbols-outlined" id='left' onClick={() => scrollPhotos('left')}>
             arrow_back_ios
           </span>
         )}
@@ -49,7 +49,7 @@ const Photos = () => {
           <img src="/wp2449378.webp" alt="img" />
         </div>
         {showRightIcon && (
-          <span className="material-symbols-outlined" id='right' onClick={() => scrollPhotos('right')}>
+          <span class="material-symbols-outlined" id='right' onClick={() => scrollPhotos('right')}>
             arrow_forward_ios
           </span>
         )}
