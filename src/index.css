@@ -74,23 +74,23 @@ body {
 
 @keyframes slideshow {
   0% {
-    background-image: url('../public/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
+    background-image: url('/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
     background-size: 105% 105%; /* Slightly larger than 100% (initial zoom in) */
   }
   25% {
-    background-image: url('../public/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
+    background-image: url('/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
     background-size: 100% 100%; /* Back to 100% (no zoom) */
   }
   50% {
-    background-image: url('../public/neat-organised-workspace-with-guitar.jpg');
+    background-image: url('/neat-organised-workspace-with-guitar.jpg');
     background-size: 105% 105%; /* Slightly larger than 100% (initial zoom in) */
   }
   75% {
-    background-image: url('../public/neat-organised-workspace-with-guitar.jpg');
+    background-image: url('/neat-organised-workspace-with-guitar.jpg');
     background-size: 100% 100%; /* Back to 100% (no zoom) */
   }
   100% {
-    background-image: url('../public/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
+    background-image: url('/interior-modern-apartment-decorated-comfortably-with-huge-windows.jpg');
     background-size: 105% 105%; /* Slightly larger than 100% (initial zoom in) */
   }
 }
@@ -592,6 +592,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  font-weight: 300;
 }
 .title-button-links span{
   font-size: 25px;

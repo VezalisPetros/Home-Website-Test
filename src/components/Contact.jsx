@@ -24,7 +24,7 @@ const Contact = () => {
                             </span>
                     </div>
                     <h3>Phone</h3>
-                    <h4>30+6909817598</h4>
+                    <h4>30+ 6909817598</h4>
                 </div>
                 <div className="phone">
                     <div className="icon-container">
@@ -38,13 +38,14 @@ const Contact = () => {
                 </div>
                 <div className="buttons-links">
                     <div className="title-button-links">
-                        <div>Book Your Stay Now</div><span class="material-symbols-outlined">
+                        <div>Book Your Stay Now</div>
+                        <span class="material-symbols-outlined">
                             south
                             </span>
                     </div>
                     
                     <a href='' className='airbnb-button'>AirBnb</a>
-                    <a href=''className='booking-button'>Bokking</a>
+                    <a href=''className='booking-button'>Booking</a>
                 </div>
                
             </div>
