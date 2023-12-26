@@ -7,6 +7,8 @@
 
 html{
   scroll-behavior:smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -14,6 +16,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
   
 }
 
@@ -498,6 +502,7 @@ body {
 .carousel img{
   height: 350px;
   width: calc(100%3);
+  max-width: 100%;
   object-fit: cover;
   margin-left: 15px;
 
@@ -562,7 +567,7 @@ body {
 .contact-items{
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   align-items: center;
@@ -583,15 +588,15 @@ body {
   flex-direction: column ;
   align-items: center;
   justify-content: center;
-  width: 50%;
   
   
+
 }
 .title-button-links{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  
   font-weight: 300;
 }
 .title-button-links span{
@@ -607,13 +612,12 @@ body {
 
 .airbnb-button,
 .booking-button {
-  position: relative;
-  overflow: hidden;
+ 
   background: rgb(95, 95, 95);
   border: 1px solid #606060;
   padding: 20px;
   margin: 20px;
-  width: 300px;
+  width: 90%;
   text-align: center;
   border-radius: 2rem;
   box-shadow: 2px 2px 5px rgba(30, 30, 30, 30);
@@ -816,6 +820,8 @@ body {
   padding: 0;
   
 }
+
+
 .info{
   flex-wrap: wrap;
   align-items: center;
@@ -863,10 +869,5 @@ body {
    }
 }
 
-@media (max-width: 1550px) {
-  .nav-links a{
-    padding: 7px;
-  }
 
- 
-}
+
