@@ -180,7 +180,7 @@ body {
   position:fixed;
   top:40px;
   right: 20px;
-  width:auto;
+  width:110px;
   display: flex;
   justify-content: center;
   z-index: 9;
@@ -736,6 +736,7 @@ body {
   
 }
 .rooms{
+
   padding: 0px;
 }
 
